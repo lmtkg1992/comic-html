@@ -1,0 +1,102 @@
+.main-body {
+  .container {
+    .story-detail {
+      display: flex;
+      width: 100%;
+      .left-column {
+        flex: 3;
+        .story-info {
+          h2 {
+            font-size: 21px;
+            font-weight: 700;
+            margin-bottom: 20px;
+          }
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+          h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 10px;
+          }
+          p {
+            font-size: 16px;
+            line-height: 1.5;
+          }
+        }
+        .chapter-list {
+          h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 30px;
+          }
+          ul {
+            list-style: none;
+            padding: 0;
+            li {
+              margin-bottom: 10px;
+              a {
+                text-decoration: none;
+                color: #14425d;
+                font-size: 16px;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
+      .right-column {
+        flex: 1;
+        margin-left: 20px;
+        .top-story {
+          h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+          }
+          .top-story-filter {
+            display: flex;
+            margin-bottom: 20px;
+            div {
+              cursor: pointer;
+              padding: 5px 10px;
+              border: 1px solid #14425d;
+              margin-right: 5px;
+              &.active {
+                background-color: #14425d;
+                color: #fff;
+              }
+            }
+          }
+          .top-story-item {
+            margin-bottom: 20px;
+            div {
+              display: flex;
+              align-items: center;
+              .top-story-num {
+                font-size: 24px;
+                font-weight: 700;
+                margin-right: 10px;
+              }
+              .top-story-num-title {
+                h3 {
+                  font-size: 18px;
+                  a {
+                    text-decoration: none;
+                    color: #14425d;
+                    &:hover {
+                      text-decoration: underline;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
