@@ -4765,24 +4765,63 @@ input:-webkit-autofill:focus {
   font-size: 21px;
   font-weight: 700;
   margin-bottom: 20px;
+  border-bottom: 1px solid rgba(20, 66, 93, 0.5);
+  padding-bottom: 10px;
 }
-.main-body .container .story-detail .left-column .story-info img {
+.main-body .container .story-detail .left-column .story-info .story-header {
+  display: flex;
+  justify-content: center;
+  /* Center the content horizontally */
+}
+.main-body .container .story-detail .left-column .story-info .story-header .story-image {
+  max-width: 40%;
+  /* Increased width for the image */
+  max-height: 300px;
+  height: auto;
+  margin-right: 20px;
+}
+.main-body .container .story-detail .left-column .story-info .story-header .story-image img {
   max-width: 100%;
   height: auto;
+  display: block;
+  /* Ensure image does not inherit text alignment */
+  margin: 0 auto;
+  /* Center the image itself */
 }
-.main-body .container .story-detail .left-column .story-info h1 {
+.main-body .container .story-detail .left-column .story-info .story-header .story-image p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 5px 0;
+  /* Add some margin to the text */
+  text-align: left;
+  /* Ensure text is left-aligned */
+}
+.main-body .container .story-detail .left-column .story-info .story-header .story-content {
+  flex: 1;
+  max-width: 75%;
+  /* Adjusted width to balance with the image */
+}
+.main-body .container .story-detail .left-column .story-info .story-header .story-content .story-name {
   font-size: 24px;
   font-weight: 700;
   margin-top: 10px;
+  text-align: center;
+  border-bottom: 1px solid rgba(166, 177, 180, 0.5);
+  padding-bottom: 10px;
+}
+.main-body .container .story-detail .left-column .story-info .story-header .story-content .story-description p {
+  margin: 10px 0;
 }
 .main-body .container .story-detail .left-column .story-info p {
   font-size: 16px;
   line-height: 1.5;
 }
 .main-body .container .story-detail .left-column .chapter-list h2 {
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 700;
-  margin-top: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(20, 66, 93, 0.5);
+  padding-bottom: 10px;
 }
 .main-body .container .story-detail .left-column .chapter-list ul {
   list-style: none;
