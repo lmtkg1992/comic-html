@@ -4917,6 +4917,10 @@ input:-webkit-autofill:focus {
 .main-body .container .chapter-header .chapter-navigation .chapter-nav-btn:hover {
   background-color: #45a049;
 }
+.main-body .container .chapter-header .chapter-navigation .chapter-nav-btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 .main-body .container .chapter-header .chapter-navigation .chapter-select {
   padding: 10px;
   border-radius: 5px;
