@@ -4868,6 +4868,11 @@ input:-webkit-autofill:focus {
   color: #333;
   border-radius: 5px;
 }
+.main-body .container .story-detail .left-column .chapter-list .pagination a.active {
+  font-weight: bold;
+  background-color: #14425d;
+  color: #fff;
+}
 .main-body .container .story-detail .left-column .chapter-list .pagination a:hover {
   background-color: #f0f0f0;
 }
