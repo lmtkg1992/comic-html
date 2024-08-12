@@ -1,0 +1,164 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML and CSS</title>
+    <link rel="stylesheet" href="styles/css/globals.css">
+    <link rel="stylesheet" href="styles/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/css/bootstrap-glyphicons.css">
+</head>
+<body>
+<div id="__next">
+    <div>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Yêu Truyện</title>
+        </head>
+        <header class="header">
+            <div class="container">
+                <h1 class="logo"><a href="http://localhost:3000"><span>YÊU TRUYỆN</span></a></h1>
+                <nav class="header-nav">
+                    <ul>
+                        <li class="dropdown">
+                            <a href="#">
+                                <div class="header-nav-item"><span class="header-nav-item-text glyphicon glyphicon-th">Danh sách</span><span class="chevron glyphicon glyphicon-chevron-down"></span></div>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">
+                                <div class="header-nav-item">
+                                    <span class="header-nav-item-text glyphicon glyphicon-th">Thể loại</span>
+                                    <div class="chevron glyphicon glyphicon-chevron-down"></div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <form class="header-form">
+                    <input class="header-form-search" id="search-input" type="search" name="keyword" placeholder="Tìm kiếm...">
+                    <button class="header-form-search-btn" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                </form>
+            </div>
+            <div class="header-breadcrumb">
+                <div class="header-breadcrumb-container">
+                    <span>Đọc truyện online, đọc truyện chữ, truyện full, truyện hay. Tổng hợp đầy đủ và cập nhật liên tục.</span>
+                </div>
+            </div>
+        </header>
+        <main class="main-body">
+            <div class="container">
+                <div class="homepage">
+                    <!-- Hot Story Section -->
+                    <div class="container-row">
+                        <div class="full-column">
+                            <div class="hot-story">
+                                <div class="hot-story-header">
+                                    <h2>TRUYỆN HOT <span class="glyphicon glyphicon-fire"></span></h2>
+                                    <div class="category-dropdown">
+                                        <select>
+                                            <option>TẤT CẢ</option>
+                                            <option>QUAN TRƯỜNG</option>
+                                            <option>TIÊN HIỆP</option>
+                                            <option>NGÔN TÌNH</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="story-grid">
+                                    <!-- Repeat the story item for each story -->
+                                    <div class="story-item">
+                                        <img src="https://yeutruyen.s3.ap-southeast-1.amazonaws.com/stories/cover_images/2e854fc7-06e6-4add-afdd-95870f3c2926_20240722233521.jpg" class="item-image" alt="QUAN KHÍ&ZeroWidthSpace;">
+                                        <div class="story-title">QUAN KHÍ​</div>
+                                    </div>
+                                    <div class="story-item">
+                                        <img src="https://yeutruyen.s3.ap-southeast-1.amazonaws.com/stories/cover_images/23e531a8-b8d6-49cb-896a-2f01443a93af_20240727160240.jpg" class="item-image" alt="Bí Thư Trùng Sinh">
+                                        <div class="story-title">Bí Thư Trùng Sinh</div>
+                                    </div>
+                                    <div class="story-item">
+                                        <img src="https://yeutruyen.s3.ap-southeast-1.amazonaws.com/stories/cover_images/9ad163ac-2286-4586-a6f1-83510c088282_20240727161733.jpg" class="item-image" alt="Y Đạo Quan Đồ">
+                                        <div class="story-title">Y Đạo Quan Đồ</div>
+                                    </div>
+                                    <!-- Add more story-item divs as needed -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-row">
+                        <div class="left-column">
+                            <div class="latest-story">
+                                <div class="latest-story-header">
+                                    <h2>TRUYỆN MỚI CẬP NHẬT <span class="glyphicon glyphicon-chevron-right"></span></h2>
+                                    <div class="category-dropdown">
+                                        <select>
+                                            <option>TẤT CẢ</option>
+                                            <option>QUAN TRƯỜNG</option>
+                                            <option>TIÊN HIỆP</option>
+                                            <option>NGÔN TÌNH</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="story-list">
+                                    <!-- Add your story rows here -->
+                                    <div class="story-row">
+                                        <div class="story-title"><a href="#">Hướng Dẫn Cách Thuần Hóa Thiếu Gia</a><span class="tag tag-new">New</span><span class="tag tag-full">Full</span></div>
+                                        <div class="story-genre">Ngôn Tình, Đoản Văn</div>
+                                        <div class="story-chapter"><a href="#">Chương 19</a></div>
+                                        <div class="story-time">7 giờ trước</div>
+                                    </div>
+                                    <!-- Repeat .story-row as needed -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-column">
+                            <div class="category-list">
+                                <div class="category-title">
+                                    <h4>THỂ LOẠI TRUYỆN</h4>
+                                </div>
+                                <div class="category-list-item">
+                                    <div class="category-column">
+                                        <a href="#">Tiên Hiệp</a>
+                                        <a href="#">Ngôn Tình</a>
+                                    </div>
+                                    <div class="category-column">
+                                        <a href="#">Ngược</a>
+                                        <a href="#">Sủng</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-row">
+                        <div class="full-column">
+                            <div class="full-story">
+                                <div class="full-story-header">
+                                    <h2>TRUYỆN ĐÃ HOÀN THÀNH <span class="glyphicon glyphicon-chevron-right"></span></h2>
+                                </div>
+                                <div class="story-grid">
+                                    <!-- Repeat the story item for each story -->
+                                    <div class="story-item">
+                                        <img src="https://yeutruyen.s3.ap-southeast-1.amazonaws.com/stories/cover_images/2e854fc7-06e6-4add-afdd-95870f3c2926_20240722233521.jpg" class="item-image" alt="QUAN KHÍ&ZeroWidthSpace;">
+                                        <div class="story-title">QUAN KHÍ​</div>
+                                        <div class="story-meta">
+                                            <span class="tag tag-full">Full</span> - 250 chương
+                                        </div>
+                                    </div>
+                                    <div class="story-item">
+                                        <img src="https://yeutruyen.s3.ap-southeast-1.amazonaws.com/stories/cover_images/23e531a8-b8d6-49cb-896a-2f01443a93af_20240727160240.jpg" class="item-image" alt="Bí Thư Trùng Sinh">
+                                        <div class="story-title">Bí Thư Trùng Sinh</div>
+                                        <div class="story-meta">
+                                            <span class="tag tag-full">Full</span> - 195 chương
+                                        </div>
+                                    </div>
+                                    <!-- Add more story-item divs as needed -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer><p>© 2024 My Story Site</p></footer>
+    </div>
+</div>
+</body>
+</html>
