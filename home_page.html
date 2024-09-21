@@ -4,8 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic HTML and CSS</title>
     <link rel="stylesheet" href="styles/css/globals.css">
-    <link rel="stylesheet" href="styles/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/css/bootstrap-glyphicons.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 <div id="__next">
@@ -18,12 +18,36 @@
         <header class="header">
             <div class="container">
                 <h1 class="logo"><a href="http://localhost:3000"><span>YÊU TRUYỆN</span></a></h1>
+                <!-- Hamburger Icon -->
+                <div class="hamburger-menu" id="menu-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <!-- Desktop Navigation -->
                 <nav class="header-nav">
                     <ul>
                         <li class="dropdown">
                             <a href="#">
-                                <div class="header-nav-item"><span class="header-nav-item-text glyphicon glyphicon-th">Danh sách</span><span class="chevron glyphicon glyphicon-chevron-down"></span></div>
+                                <div class="header-nav-item">
+                                    <span class="header-nav-item-text glyphicon glyphicon-th">Danh sách</span>
+                                    <span class="chevron glyphicon glyphicon-chevron-down"></span>
+                                </div>
                             </a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-row">
+                                    <div class="dropdown-column">
+                                        <ul class="">
+                                            <li>
+                                                <a href="/categories/truyen-full" title="Truyện Full">Truyện Full</a>
+                                            </li>
+                                            <li>
+                                                <a href="/categories/tien-hiep-hay" title="Tiên Hiệp Hay">Tiên Hiệp Hay</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li class="dropdown">
                             <a href="#">
@@ -32,9 +56,76 @@
                                     <div class="chevron glyphicon glyphicon-chevron-down"></div>
                                 </div>
                             </a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-row">
+                                    <div class="dropdown-column">
+                                        <ul>
+                                            <li>
+                                                <a href="/categories/tien-hiep" title="Tiên Hiệp">Tiên Hiệp</a>
+                                            </li>
+                                            <li>
+                                                <a href="/categories/kiem-hiep" title="Kiếm Hiệp">Kiếm Hiệp</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown-column">
+                                        <ul>
+                                            <li>
+                                                <a href="/categories/xuyen-khong" title="Xuyên Không">Xuyên Không</a>
+                                            </li>
+                                            <li>
+                                                <a href="/categories/xuyen-nhanh" title="Xuyên Nhanh">Xuyên Nhanh</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown-column">
+                                        <ul>
+                                            <li>
+                                                <a href="/categories/do-thi" title="Đô Thị">Đô Thị</a>
+                                            </li>
+                                            <li>
+                                                <a href="/categories/bach-hop" title="Bách Hợp">Bách Hợp</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </nav>
+
+                <!-- Mobile Navigation (Hidden by Default) -->
+                <nav class="mobile-nav" id="mobile-nav">
+                    <ul>
+                        <li class="mobile-dropdown">
+                            <a href="javascript:void(0)" class="mobile-dropdown-toggle">
+                                <i class="fas fa-list"></i> Danh sách
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="mobile-dropdown-menu">
+                                <li><a href="/categories/truyen-full">Truyện Full</a></li>
+                                <li><a href="/categories/tien-hiep-hay">Tiên Hiệp Hay</a></li>
+                            </ul>
+                        </li>
+                        <li class="mobile-dropdown">
+                            <a href="javascript:void(0)" class="mobile-dropdown-toggle">
+                                <i class="fas fa-list"></i> Thể loại
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="mobile-dropdown-menu">
+                                <li><a href="/categories/tien-hiep">Tiên Hiệp</a></li>
+                                <li><a href="/categories/kiem-hiep">Kiếm Hiệp</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- Mobile Search Form -->
+                    <form class="mobile-search-form" id="mobile-search-form">
+                        <input class="mobile-form-search" type="search" name="keyword" placeholder="Tìm kiếm...">
+                        <button class="mobile-form-search-btn" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                    </form>
+                </nav>
+                <div class="flex-spacer"></div>
+                <!-- Desktop Search Form -->
                 <form class="header-form">
                     <input class="header-form-search" id="search-input" type="search" name="keyword" placeholder="Tìm kiếm...">
                     <button class="header-form-search-btn" type="submit"><span class="glyphicon glyphicon-search"></span></button>
@@ -160,5 +251,23 @@
         <footer><p>© 2024 My Story Site</p></footer>
     </div>
 </div>
+<script>
+    // Get the hamburger icon and the mobile nav
+    const menuIcon = document.getElementById('menu-icon');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    menuIcon.addEventListener('click', () => {
+        mobileNav.classList.toggle('active');
+    });
+
+
+    // Add click event listeners to each menu item
+    const menuItems = document.querySelectorAll('.mobile-nav li');
+    menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('active');
+        });
+    });
+</script>
 </body>
 </html>
